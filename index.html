@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<style>
+body {
+    font-family: sans-serif;
+}
+.wrap {
+    width: 75%;
+    max-width: 800px;
+    margin: 2em auto;
+}
+img {
+    width: 100%;
+}
+pre {
+    overflow: auto;
+    padding: 1em;
+    border: 1px solid #999;
+}
+</style>
+<title>Responsive Enhance</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<div class="wrap">
+<h1>Responsive Enhance</h1>
+<p>Depending on the size of your viewport, you may see a 400px by 300px wide image, or a 800px by 600px image. Try refreshing the page with a small or wide browser window. The standard image is always downloaded, full images are then downloaded as needed.</p>
+<p><img id="demo1" src="http://dummyimage.com/400x300" alt="Responsive Image" data-fullsrc="http://dummyimage.com/800x600"></p>
+<p><pre><code>&lt;img id="demo1" src="http://dummyimage.com/400x300" alt="Responsive Image" data-fullsrc="http://dummyimage.com/800x600"&gt;
+&lt;script&gt;responsiveEnhance(document.getElementById('demo1'), 400);&lt;/script&gt;</code></pre></p>
+<p>Here's a photo of some lovely star biscuits that <a href="http://twitter.com/qwertykate">@qwertykate</a> bought us. Image courtesy of <a href="http://www.flickr.com/photos/adactio/">adactio</a>.</p>
+<p><a href="http://www.flickr.com/photos/adactio/6806617685"><img id="demo2" src="http://farm8.staticflickr.com/7022/6806617685_3be0d007c3_m.jpg" alt="Responsive Image" data-fullsrc="http://farm8.staticflickr.com/7022/6806617685_b793771008_o.jpg"></a></p>
+<p><pre><code>&lt;img id="demo2" src="http://farm8.staticflickr.com/7022/6806617685_3be0d007c3_m.jpg" alt="Responsive Image" data-fullsrc="http://farm8.staticflickr.com/7022/6806617685_b793771008_o.jpg"&gt;
+&lt;script&gt;responsiveEnhance(document.getElementById('demo2'), 240);&lt;/script&gt;</code></pre></p>
+</div>
+</body>
+<script src="responsive-enhance.js"></script>
+<script>
+responsiveEnhance(document.getElementById('demo1'), 400);
+responsiveEnhance(document.getElementById('demo2'), 240);
+</script>
+</html>
