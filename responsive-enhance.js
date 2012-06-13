@@ -9,8 +9,8 @@ var responsiveEnhance = function(img, width, monitor) {
         if (((' '+img.className+' ').replace(/[\n\t]/g, ' ').indexOf(' large ') == -1) && img.clientWidth > width) {
             var fullimg = new Image();
             addEvent(fullimg, 'load', function(e) {
-                img.src = this.src;
                 img.className += ' large';
+                img.src = this.src;
             });
             fullimg.src = img.getAttribute('data-fullsrc');
         }
